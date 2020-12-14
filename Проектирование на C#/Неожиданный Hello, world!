@@ -1,0 +1,22 @@
+Сделайте так, чтобы эта программа вывела на консоль Hello, world!
+
+public static void Main()
+{
+    var a = new A();
+    a.Number = 1;
+}
+
+
+
+ANSWER:
+
+class A 
+{
+    public A()
+    {
+        Console.WriteLine("Hello, world!");
+    }
+    
+    public int Number {get; set;}
+    
+}
