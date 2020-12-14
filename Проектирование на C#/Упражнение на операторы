@@ -1,0 +1,23 @@
+Напишите как можно меньше кода, чтобы программа скомпилировалась.
+
+public static void Main()
+{
+    int a = new A() + new A() + new A() * "abc";
+}
+
+
+
+ANSWER:
+
+class A
+{        
+    public static int operator +(A a1, A a2)
+    {
+        return 0;
+    }
+
+    public static int operator *(A a1, string str)
+    {
+        return 0;
+    }
+}
