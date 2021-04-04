@@ -29,11 +29,25 @@ Sample Output 2:
 
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
-public class MainClass
+namespace STEPIK_C_SHARP
 {
-    public static void Main()
+    class Program
     {
-        // put your c# code here
+        static void Main(string[] args)
+        {
+            int[] numbers = Console.ReadLine().Split().Select(e => int.Parse(e)).ToArray();
+            int count = 0;
+
+            for (int i = 1; i < numbers.Length - 1; i++)
+            {
+                if (numbers[i - 1] < numbers[i] && numbers[i] > numbers[i + 1])
+                    count++;
+            }
+
+            Console.WriteLine(count);
+        }
     }
 }
